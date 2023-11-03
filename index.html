@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+    body{
+      margin: 0;
+      padding: 0;
+      background-color: #F0F8FF;
+
+    }
+    
+    .container{
+      height:500px;
+      width: 800px;
+      display: flex;
+      margin-left: 300px;
+      margin-top: 300px;
+      margin-bottom: 300px;
+      border-radius:30px;
+      background-color: white;
+    }
+
+    .left{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#6743ff,#332cea);
+      /* background: linear-gradient(#e66465, #9198e5); */
+      border-radius: 30px;
+    }
+
+    .right{
+      width: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      background-color: #ffffff;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .circle{
+      display: flex;
+      color: white;
+      background-color: #462bda;
+      width: 200px;
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    p{
+      color: white;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+   
+    .seventy-six{
+     font-size: 70px;
+     margin: 0;
+     font-weight: bold;
+    }
+
+    .hundred{
+    margin: 0;
+    font-size:small;
+    margin-left: 15px;
+    }
+
+    .right p{
+      color: black;
+    }
+
+    .summary{
+      display: flex;
+      width: 100%;
+      padding-left: 120px;
+    }
+
+    .reaction{
+      display: flex;
+      gap: 115px;
+      margin: 0;
+      border-radius: 10px;
+      background-color:#fff6f5;
+      width: 300px;
+    }
+
+    .reaction-left{
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+    }
+ 
+    .memory{
+      display: flex;
+      gap: 115px;
+      margin: 0;
+      border-radius: 10px;
+      background-color:#fffbf2;
+      width: 300px;
+    }
+
+    .memory-left{
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+    }
+
+    .verbal{
+      display: flex;
+      gap: 130px;
+      margin: 0;
+      border-radius: 10px;
+      background-color:#f2fbfa;
+      width: 300px;
+    }
+
+    .verbal-left{
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+    }
+
+    .visual{
+      display: flex;
+      gap: 132px;
+      margin: 0;
+      border-radius: 10px;
+      background-color:#f3f3fd;
+      width: 300px;
+    }
+
+    .visual-left{
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+    }
+
+    button{
+      margin-top: 20px;
+      width: 300px;
+      height: 45px;
+      border-radius: 50px;
+      border: none;
+      background-color: #202991;
+      color: white;
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 600;
+    }
+
+    button:hover{
+      background-color:#2029917e;
+      color:white;
+    }
+
+    .attribution{
+      text-align: center;
+    }
+
+    
+    @media (max-width:1000px) {
+
+      .container{
+        display: flex;
+        flex-direction: column;
+        width: 430px;
+        margin: auto;
+      }
+
+      .left{
+      width: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#6743ff,#332cea);
+      border-radius: 30px;
+      padding-bottom: 30px;
+    }
+      
+      .right{
+      width: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      background-color: #ffffff;
+      border-radius: 0;
+    }
+
+    button{
+      margin-bottom: 30px;
+    }
+    .attribution{
+      text-align: center;
+      margin-top: 500px;
+    }
+    }
+  
+
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="left">
+
+        <p style="font-size:25px; margin-bottom: 40px ;padding:0 ">Your Result</p>
+        
+        <div class="circle">
+          <div class="circle-text">
+            <p class="seventy-six">76</p>
+            <p class="hundred">of 100</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 10px; margin-bottom: 10px; padding: 0; font-size: 35px; font-weight: bold;">Great</p>
+
+        <p style="text-align:center; width:220px ; margin:0; padding:0;"> You scored higher than 65% of the people who have taken these tests.</p> 
+      </div>
+      
+      <div class="right">
+        <div class="summary">
+          <p style="color: black;font-weight: bold; font-size: 20px;">
+           Summary
+          </p>
+        </div>
+
+      <div class="reaction">
+        <div class="reaction-left">
+          <img src="./assets/images/icon-reaction.svg" alt="reaction-logo">
+          <p style="font-weight: 700; color: #df6a68;"> Reaction </p>
+        </div>
+        <p> <span style="font-weight: 700;">80 /</span>  100 </p>
+      </div>
+
+      <div class="memory">
+        <div class="memory-left">
+          <img src="./assets/images/icon-memory.svg" alt="memory-logo">
+          <p style="font-weight: 700; color: #f2ba52" > Memory </p>
+        </div>
+        <p> <span style="font-weight: 700;">92 /</span> 100 </p>
+      </div>
+
+      <div class="verbal">
+        <div class="verbal-left">
+          <img src="/assets/images/icon-verbal.svg" alt="verbal-logo">
+          <p style="font-weight: 700; color: #51a590;"> Verbal </p>
+        </div>
+        <p> <span style="font-weight:700"> 61 /</span> 100 </p>
+      </div>
+
+      <div class="visual">
+        <div class="visual-left">
+          <img src="/assets/images/icon-visual.svg" alt="visual-logo">
+          <p style="font-weight:700; color: #202991;"> Visual </p>
+        </div>
+          <p> <span style="font-weight:700">72 /</span> 100 </p>
+        </div>
+
+      <button >Continue</button>
+        
+
+      </div>
+
+  </div>
+  
+  <div class="attribution">
+    <h2 style="margin:0">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </h2>
+    <h5 style="margin-top: 3px">Coded by <a href="https://www.linkedin.com/in/patilpr/">PRASHANT PATIL</a></h5>
+  </div>
+</body>
+</html>
